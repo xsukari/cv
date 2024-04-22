@@ -1,3 +1,46 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/button-has-type",
+    "plugin:react/no-array-index-key",
+    "plugin:react/display-name",
+    "plugin:react/no-children-prop",
+    "plugin:react/no-danger-with-children"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "no-await-in-loop": "error",
+    "no-duplicate-imports": "error",
+    "no-self-compare": "error",
+    "no-unreachable-loop": "error",
+    "no-use-before-define": "error"
+  }
 }
