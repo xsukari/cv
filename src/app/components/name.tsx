@@ -1,9 +1,7 @@
-import { Sono } from "next/font/google"
 import fs from "fs"
 import fsAsync from "fs/promises"
+import { sonoLight, sono } from "./fonts"
 
-const sono = Sono({ subsets: ["latin"] })
-const sonoLight = Sono({ subsets: ["latin"], weight: "300" })
 const values = {
     firstName: "firstName",
     lastName: "lastName",
