@@ -3,6 +3,8 @@ import Person from "./components/person"
 import Contact from "./components/contact"
 import Education from "./components/education"
 import Languages from "./components/languages"
+import Experience from "./components/experience"
+import Skills from "./components/skills"
 
 export default function Home() {
     return (
@@ -10,16 +12,18 @@ export default function Home() {
             <div className="w-1/3 min-h-screen bg-[#2b3639]">
                 {/* Left column */}
 
-                <Picture />
-                <Contact />
-                <Education />
-                <Languages />
+                <Picture/>
+                <Contact/>
+                <Education/>
+                <Languages/>
 
             </div>
             <div className="w-2/3 min-h-screen bg-[#ffffff]">
                 {/* Right column */}
 
-                <Person />
+                <Person/>
+                <Experience/>
+                <Skills/>
 
             </div>
         </main>
