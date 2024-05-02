@@ -1,5 +1,8 @@
 import Picture from "./components/picture"
-import Name from "./components/name"
+import Person from "./components/person"
+import Contact from "./components/contact"
+import Education from "./components/education"
+import Languages from "./components/languages"
 
 export default function Home() {
     return (
@@ -8,14 +11,15 @@ export default function Home() {
                 {/* Left column */}
 
                 <Picture />
-                <div className="h-1/5">
+                <Contact />
+                <Education />
+                <Languages />
 
-                </div>
             </div>
             <div className="w-2/3 min-h-screen bg-[#ffffff]">
                 {/* Right column */}
 
-                <Name />
+                <Person />
 
             </div>
         </main>
