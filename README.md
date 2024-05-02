@@ -38,6 +38,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Credits
 
 Icons
-    License: CC Attribution License (https://www.svgrepo.com/page/licensing/#CC%20Attribution)
-    Author: Dazzle UI (https://www.svgrepo.com/author/Dazzle%20UI/)
-    Note: No changes to the file were made, though in the project, the colors are inverted. See /public/icons/CREDITS for more information.
+- License: CC Attribution License (https://www.svgrepo.com/page/licensing/#CC%20Attribution)
+- Author: Dazzle UI (https://www.svgrepo.com/author/Dazzle%20UI/)
+- Note: No changes to the file were made, though in the project, the colors are inverted. See /public/icons/CREDITS for more information.
