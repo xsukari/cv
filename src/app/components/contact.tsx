@@ -1,6 +1,6 @@
 import Image from "next/image"
 import * as data from "./data"
-import { sonoLight, openSans } from "./fonts"
+import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 
 const _contact = data.getData(data.categories.contact) as data.Contact
 
@@ -28,7 +28,7 @@ function contactElement(element: string): JSX.Element {
 
     return (
         <div className="py-1 flex">
-            <div className="invert pt-[3px] pr-2">
+            <div className="invert pt-[2px] pr-2">
                 <Image
                     src={"/icons/" + icons[element as keyof object]}
                     alt={element}
@@ -36,7 +36,7 @@ function contactElement(element: string): JSX.Element {
                     height={20}
                 />
             </div>
-            <div className={openSans.className}>
+            <div className={sofiaSansSemiCondensed.className}>
                 {_contact[element as keyof object]}
             </div>
         </div>
