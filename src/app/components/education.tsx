@@ -1,26 +1,34 @@
 import * as data from "./data"
-import { sonoLight, openSans } from "./fonts"
+import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 
-const text = {
-    degree: "degree",
-    university: "university",
-    location: "location",
-    startDate: "startDate",
-    endDate: "endDate"
-}
+const _education = data.getData(data.categories.education) as data.Education[]
 
-function educationElements(): JSX.Element {
-    
+function educationElements(): JSX.Element[] {
+    const elements: JSX.Element[] = []
 
-    
-/*
-    <div className="py-1">
-        <div className={openSans.className}>
-            
-        </div>
-    </div>
-*/
-    return <></>
+    _education.forEach(element => {
+        elements.push (
+            <div className="px-7 pt-5">
+                <div className="py-1">
+                    <div className={sofiaSansSemiCondensed.className}>
+                        {element.degree}
+                    </div>
+                </div>
+                <div className="py-1">
+                    <div className={sofiaSansSemiCondensed.className}>
+                        {element.university + ", " + element.location}
+                    </div>
+                </div>
+                <div className="py-1">
+                    <div className={sofiaSansSemiCondensed.className}>
+                        {element.startDate + " - " + element.endDate}
+                    </div>
+                </div>
+            </div>
+        )
+    })
+
+    return elements
 }
 
 export default function education() {
@@ -30,9 +38,9 @@ export default function education() {
                 <div className={sonoLight.className}>
                     Education
                 </div>
-
-                {educationElements()}
             </div>
+
+            {educationElements()}
         </div>
     )
 }
