@@ -1,7 +1,8 @@
 import * as data from "./data"
 import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 
-const _education = data.getData(data.categories.education) as data.Education[]
+const _education = (data.getData(data.categories.education) as data.Education[])
+    .sort((a, b) => parseInt(b.endYear) - parseInt(a.endYear))
 
 function educationElements(): JSX.Element[] {
     const elements: JSX.Element[] = []
