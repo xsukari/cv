@@ -17,18 +17,18 @@ function languageValue(value: number, maxValue: number): JSX.Element[] {
                 className="mx-[1px]"
             />
         )
+    }
 
-        if (i === Math.floor(value / 2) - 1 && (value % 2 !== 0)) {
-            elements.push(
-                <Image
-                    src="/icons/circle-half-1.svg"
-                    alt={"progress " + i + 1}
-                    width={20}
-                    height={20}
-                    className="mx-[1px]"
-                />
-            )
-        }
+    if (value % 2 !== 0) {
+        elements.push(
+            <Image
+                src="/icons/circle-half-1.svg"
+                alt={"progress " + Math.floor(value / 2) + 1}
+                width={20}
+                height={20}
+                className="mx-[1px]"
+            />
+        )
     }
 
     for (let i = Math.ceil(value / 2); i < maxValue / 2; i++) {
