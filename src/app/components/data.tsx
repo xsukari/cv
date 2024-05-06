@@ -38,6 +38,12 @@ export interface Languages {
     maxValue: number
 }
 
+export interface Skills {
+    name: string,
+    value: number,
+    maxValue: number
+}
+
 function getDataFile(): string {
     if (fs.existsSync(process.cwd() + "/public/data.json")) {
         return process.cwd() + "/public/data.json"
@@ -46,7 +52,7 @@ function getDataFile(): string {
     }
 }
 
-export function getData(category: string): ( Person | Contact | Education[] | Languages[] ) {
+export function getData(category: string): ( Person | Contact | Education[] | Languages[] | Skills[] ) {
     const file = fs.readFileSync(getDataFile(), "utf8")
     const data = JSON.parse(file)
 
