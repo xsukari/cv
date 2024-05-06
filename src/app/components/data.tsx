@@ -44,6 +44,22 @@ export interface Skills {
     maxValue: number
 }
 
+export interface Timeframe {
+    startMonth: string,
+    startYear: string,
+    endMonth: string,
+    endYear: string
+}
+export interface Activity {
+    description: string
+}
+export interface Experience {
+    timeFrame: Timeframe,
+    title: string,
+    company: string,
+    activities: Activity[]
+}
+
 function getDataFile(): string {
     if (fs.existsSync(process.cwd() + "/public/data.json")) {
         return process.cwd() + "/public/data.json"
@@ -52,7 +68,7 @@ function getDataFile(): string {
     }
 }
 
-export function getData(category: string): ( Person | Contact | Education[] | Languages[] | Skills[] ) {
+export function getData(category: string): ( Person | Contact | Education[] | Languages[] | Skills[] | Experience[] ) {
     const file = fs.readFileSync(getDataFile(), "utf8")
     const data = JSON.parse(file)
 
