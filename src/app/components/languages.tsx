@@ -11,7 +11,7 @@ function languageValue(value: number, maxValue: number): JSX.Element[] {
         elements.push(
             <Image
                 src="/icons/circle-full.svg"
-                alt={"progress" + i}
+                alt={"progress " + i}
                 width={20}
                 height={20}
                 className="mx-[1px]"
@@ -22,7 +22,7 @@ function languageValue(value: number, maxValue: number): JSX.Element[] {
             elements.push(
                 <Image
                     src="/icons/circle-half-1.svg"
-                    alt={"progress" + i + 1}
+                    alt={"progress " + i + 1}
                     width={20}
                     height={20}
                     className="mx-[1px]"
@@ -35,7 +35,7 @@ function languageValue(value: number, maxValue: number): JSX.Element[] {
         elements.push(
             <Image
                 src="/icons/circle-svgrepo-com.svg"
-                alt={"progress" + i}
+                alt={"progress " + i}
                 width={20}
                 height={20}
                 className="mx-[1px]"
@@ -56,7 +56,7 @@ function languageElements(): JSX.Element[] {
                     {element.name}
                 </div>
 
-                <div className="invert pb-[2px] px-5 pl-6 flex">
+                <div className="invert pb-[2px] pl-12 flex">
                     {languageValue(element.value, element.maxValue)}
                 </div>
             </div>
