@@ -2,7 +2,9 @@ import Image from "next/image"
 import * as data from "./data"
 import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 
-const _skills = data.getData(data.categories.skills) as data.Skills[]
+const _skills = (data.getData(data.categories.skills) as data.Skills[])
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => b.value - a.value)
 
 function skillValue(value: number, maxValue: number): JSX.Element[] {
     const elements: JSX.Element[] = []
