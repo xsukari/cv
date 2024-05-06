@@ -2,7 +2,9 @@ import Image from "next/image"
 import * as data from "./data"
 import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 
-const _languages = data.getData(data.categories.languages) as data.Languages[]
+const _languages = (data.getData(data.categories.languages) as data.Languages[])
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .sort((a, b) => b.value - a.value)
 
 function languageValue(value: number, maxValue: number): JSX.Element[] {
     const elements: JSX.Element[] = []
