@@ -6,6 +6,10 @@ const _skills = data.getData(data.categories.skills) as data.Skills[]
 
 function skillValue(value: number, maxValue: number): JSX.Element[] {
     const elements: JSX.Element[] = []
+
+    // Overwrite parameters in case of invalid input in data.json
+    value = value > 10 ? 10 : value
+    maxValue = maxValue !== 10 ? 10 : maxValue
     
     for (let i = 0; i < Math.floor(value / 2); i++) {
         elements.push(
