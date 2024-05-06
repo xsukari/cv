@@ -28,8 +28,8 @@ export interface Education {
     degree: string,
     university: string,
     location: string,
-    startDate: string,
-    endDate: string
+    startYear: string,
+    endYear: string
 }
 
 export interface Languages {

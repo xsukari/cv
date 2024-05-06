@@ -21,7 +21,7 @@ function educationElements(): JSX.Element[] {
                 </div>
                 <div className="py-1">
                     <div className={sofiaSansSemiCondensed.className}>
-                        {element.startDate + " - " + element.endDate}
+                        {element.startYear + " - " + element.endYear}
                     </div>
                 </div>
             </div>
