@@ -8,8 +8,8 @@ import Skills from "./components/skills"
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen">
-            <div className="w-1/3 min-h-screen bg-[#2b3639]">
+        <main className={"flex h-[1178px] w-[833px] m-auto"}>
+            <div className="w-1/3 bg-[#2b3639]">
                 {/* Left column */}
 
                 <Picture/>
@@ -18,7 +18,7 @@ export default function Home() {
                 <Languages/>
 
             </div>
-            <div className="w-2/3 min-h-screen bg-[#ffffff]">
+            <div className="w-2/3 bg-[#ffffff]">
                 {/* Right column */}
 
                 <Person/>
