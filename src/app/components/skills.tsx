@@ -5,6 +5,7 @@ import { sonoLight, sofiaSansSemiCondensed } from "./fonts"
 const _skills = (data.getData(data.categories.skills) as data.Skills[])
     .sort((a, b) => a.name.localeCompare(b.name))
     .sort((a, b) => b.value - a.value)
+const skillsLimit = _skills.length > 10 ? 10 : _skills.length
 
 function skillValue(value: number, maxValue: number): JSX.Element[] {
     const elements: JSX.Element[] = []
@@ -55,7 +56,7 @@ function skillValue(value: number, maxValue: number): JSX.Element[] {
 function skillElements(): JSX.Element[] {
     const elements: JSX.Element[] = []
 
-    for (let i = 0; i < _skills.length; i++) {
+    for (let i = 0; i < skillsLimit; i++) {
         elements.push (
             <div className={"w-1/2 py-1 " + ((i % 2 === 0) ? "pr-2" : "pl-2" ) + " flex"}>
                 <div className="min-w-[50%]">
