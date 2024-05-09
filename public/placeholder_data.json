@@ -171,6 +171,6 @@
         "address": true,
         "social": true,
         "repo": true,
-        "homepage": false
+        "homepage": true
     }
 }
