@@ -41,11 +41,19 @@ function experienceElements(): JSX.Element[] {
                             {
                                 _experience[i].company +
                                 ", " +
-                                _experience[i].timeFrame.startMonth +
+                                (
+                                    _experience[i].timeFrame.startMonth.length < 2 ? 
+                                        "0" + _experience[i].timeFrame.startMonth :
+                                        _experience[i].timeFrame.startMonth
+                                ) +
                                 "/" +
                                 _experience[i].timeFrame.startYear +
                                 " - " +
-                                _experience[i].timeFrame.endMonth +
+                                (
+                                    _experience[i].timeFrame.endMonth.length < 2 ? 
+                                        "0" + _experience[i].timeFrame.endMonth :
+                                        _experience[i].timeFrame.endMonth
+                                ) +
                                 "/" +
                                 _experience[i].timeFrame.endYear
                             }
