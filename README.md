@@ -1,5 +1,5 @@
 ## Limitations
-- This project uses pnpm.
+- This project uses pnpm. You need to have it set up already.
 
 - If you don't know how to properly edit a JSON file or run the project, this project unfortunately isn't for you.
 
@@ -25,10 +25,11 @@
 1. Put an image of yourself as "portrait.jpg", with a 1:1 aspect ratio, I used 1600 px * 1600 px, into /cv/public/.
 2. Still in /cv/public/, copy "placeholder_data.json" and rename it to "data.json".
 3. Fill out data.json with your values. You can add / remove array elements from education, languages, skills, experiences, or activities (contained in an experience entry). There are hard limits for education (2), skills (10), and experiences (2), that are enforced in the code, but not for languages or activities. If something overflows after filling out data.json, try shortening some entries or remove some less important information.
-4. Run the development server with "pnpm dev".
-5. Open [http://localhost:3000](http://localhost:3000) with your browser.
-6. Save page as PDF or use "Print", then select the entry "save as PDF". If you don't know how to do that with your browser, check the web for instructions.
-7. Hopefully everything will have come out as I intended, it does for me at least. If it doesn't, but you are experienced enough, try modifying the project. I unfortunately don't have time to support this project for other users, because it's really just meant for me, but it still might be useful for others, therefore I have it public, aside form portfolio purposes.
+4. Install dependencies with "pnpm install".
+5. Run the development server with "pnpm dev".
+6. Open [http://localhost:3000](http://localhost:3000) with your browser.
+7. Save page as PDF or use "Print", then select the entry "save as PDF". If you don't know how to do that with your browser, check the web for instructions.
+8. Hopefully everything will have come out as I intended, it does for me at least. If it doesn't, but you are experienced enough, try modifying the project. I unfortunately don't have time to support this project for other users, because it's really just meant for me, but it still might be useful for others, therefore I have it public, aside form portfolio purposes.
 
 ## To-do
 
