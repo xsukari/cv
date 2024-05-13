@@ -1,5 +1,7 @@
 import fs from "fs"
 
+export const maxValue = 10
+
 export const categories = {
     person: "person",
     contact: "contact",
@@ -15,13 +17,17 @@ export interface Person {
     title: string
 }
 
+interface ContactElement {
+    value: string,
+    visible: boolean
+}
 export interface Contact {
-    mobile: string,
-    mail: string,
-    address: string,
-    repo: string,
-    social: string,
-    homepage: string
+    mobile: ContactElement,
+    mail: ContactElement,
+    address: ContactElement,
+    repo: ContactElement,
+    social: ContactElement,
+    homepage: ContactElement
 }
 
 export interface Education {
@@ -34,23 +40,21 @@ export interface Education {
 
 export interface Languages {
     name: string,
-    value: number,
-    maxValue: number
+    value: number
 }
 
 export interface Skills {
     name: string,
-    value: number,
-    maxValue: number
+    value: number
 }
 
-export interface Timeframe {
+interface Timeframe {
     startMonth: string,
     startYear: string,
     endMonth: string,
     endYear: string
 }
-export interface Activity {
+interface Activity {
     description: string
 }
 export interface Experience {
@@ -72,12 +76,5 @@ export function getData(category: string): ( Person | Contact | Education[] | La
     const file = fs.readFileSync(getDataFile(), "utf8")
     const data = JSON.parse(file)
 
-    return data.elements[category]
-}
-
-export function getVisibilty(element: string): boolean {
-    const file = fs.readFileSync(getDataFile(), "utf8")
-    const data = JSON.parse(file)
-
-    return data.visibility[element]
+    return data[category]
 }

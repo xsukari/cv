@@ -6,12 +6,11 @@ const _languages = (data.getData(data.categories.languages) as data.Languages[])
     .sort((a, b) => a.name.localeCompare(b.name))
     .sort((a, b) => b.value - a.value)
 
-function languageValue(value: number, maxValue: number): JSX.Element[] {
+function languageValue(value: number): JSX.Element[] {
     const elements: JSX.Element[] = []
 
     // Overwrite parameters in case of invalid input in data.json
     value = value > 10 ? 10 : value
-    maxValue = maxValue !== 10 ? 10 : maxValue
     
     for (let i = 0; i < Math.floor(value / 2); i++) {
         elements.push(
@@ -37,7 +36,7 @@ function languageValue(value: number, maxValue: number): JSX.Element[] {
         )
     }
 
-    for (let i = Math.ceil(value / 2); i < maxValue / 2; i++) {
+    for (let i = Math.ceil(value / 2); i < data.maxValue / 2; i++) {
         elements.push(
             <Image
                 src="/icons/circle-svgrepo-com.svg"
@@ -63,7 +62,7 @@ function languageElements(): JSX.Element[] {
                 </div>
 
                 <div className="invert pb-[2px] pl-12 flex">
-                    {languageValue(element.value, element.maxValue)}
+                    {languageValue(element.value)}
                 </div>
             </div>
         )

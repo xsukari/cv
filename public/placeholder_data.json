@@ -1,176 +1,160 @@
 {
-    "elements": {
-        "person": {
-            "firstName": "firstName",
-            "lastName": "lastName",
-            "title": "title"
-        },
-        "contact": {
-            "mobile": "mobile",
-            "mail": "mail",
-            "address": "address",
-            "social": "social",
-            "repo": "repo",
-            "homepage": "homepage"
-        },
-        "education": [
-            {
-                "degree": "degree",
-                "university": "university",
-                "location": "location",
-                "startYear": "startYear",
-                "endYear": "endYear"
-            },
-            {
-                "degree": "degree",
-                "university": "university",
-                "location": "location",
-                "startYear": "startYear",
-                "endYear": "endYear"
-            }
-        ],
-        "languages": [
-            {
-                "name": "language",
-                "value": 10,
-
-                "maxValue": 10
-            },
-            {
-                "name": "language",
-                "value": 5,
-
-                "maxValue": 10
-            }
-        ],
-        "skills": [
-            {
-                "name": "skill",
-                "value": 10,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 9,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 8,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 7,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 6,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 5,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 4,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 3,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 2,
-
-                "maxValue": 10
-            },
-            {
-                "name": "skill",
-                "value": 1,
-
-                "maxValue": 10
-            }
-        ],
-        "experience": [
-            {
-                "timeFrame": {
-                    "startMonth": "startMonth",
-                    "startYear": "startYear",
-                    "endMonth": "endMonth",
-                    "endYear": "endYear"
-                },
-                "title": "title",
-                "company": "company",
-                "activities": [
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    }
-                ]
-            },
-            {
-                "timeFrame": {
-                    "startMonth": "startMonth",
-                    "startYear": "startYear",
-                    "endMonth": "endMonth",
-                    "endYear": "endYear"
-                },
-                "title": "title",
-                "company": "company",
-                "activities": [
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    },
-                    {
-                        "description": "description"
-                    }
-                ]
-            }
-        ]
+    "person": {
+        "firstName": "firstName",
+        "lastName": "lastName",
+        "title": "title"
     },
-    "visibility": {
-        "mobile": true,
-        "mail": true,
-        "address": true,
-        "social": true,
-        "repo": true,
-        "homepage": true
-    }
+    "contact": {
+        "mobile": {
+            "value": "mobile",
+            "visible": true
+        },
+        "mail": {
+            "value": "mail",
+            "visible": true
+        },
+        "address": {
+            "value": "address",
+            "visible": true
+        },
+        "social": {
+            "value": "social",
+            "visible": true
+        },
+        "repo": {
+            "value": "repo",
+            "visible": true
+        },
+        "homepage": {
+            "value": "homepage",
+            "visible": true
+        }
+    },
+    "education": [
+        {
+            "degree": "degree",
+            "university": "university",
+            "location": "location",
+            "startYear": "startYear",
+            "endYear": "endYear"
+        },
+        {
+            "degree": "degree",
+            "university": "university",
+            "location": "location",
+            "startYear": "startYear",
+            "endYear": "endYear"
+        }
+    ],
+    "languages": [
+        {
+            "name": "language",
+            "value": 10
+        },
+        {
+            "name": "language",
+            "value": 5
+        }
+    ],
+    "skills": [
+        {
+            "name": "skill",
+            "value": 10
+        },
+        {
+            "name": "skill",
+            "value": 9
+        },
+        {
+            "name": "skill",
+            "value": 8
+        },
+        {
+            "name": "skill",
+            "value": 7
+        },
+        {
+            "name": "skill",
+            "value": 6
+        },
+        {
+            "name": "skill",
+            "value": 5
+        },
+        {
+            "name": "skill",
+            "value": 4
+        },
+        {
+            "name": "skill",
+            "value": 3
+        },
+        {
+            "name": "skill",
+            "value": 2
+        },
+        {
+            "name": "skill",
+            "value": 1
+        }
+    ],
+    "experience": [
+        {
+            "timeFrame": {
+                "startMonth": "startMonth",
+                "startYear": "startYear",
+                "endMonth": "endMonth",
+                "endYear": "endYear"
+            },
+            "title": "title",
+            "company": "company",
+            "activities": [
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                }
+            ]
+        },
+        {
+            "timeFrame": {
+                "startMonth": "startMonth",
+                "startYear": "startYear",
+                "endMonth": "endMonth",
+                "endYear": "endYear"
+            },
+            "title": "title",
+            "company": "company",
+            "activities": [
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                },
+                {
+                    "description": "description"
+                }
+            ]
+        }
+    ]
 }

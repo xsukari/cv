@@ -7,12 +7,11 @@ const _skills = (data.getData(data.categories.skills) as data.Skills[])
     .sort((a, b) => b.value - a.value)
 const skillsLimit = _skills.length > 10 ? 10 : _skills.length
 
-function skillValue(value: number, maxValue: number): JSX.Element[] {
+function skillValue(value: number): JSX.Element[] {
     const elements: JSX.Element[] = []
 
     // Overwrite parameters in case of invalid input in data.json
     value = value > 10 ? 10 : value
-    maxValue = maxValue !== 10 ? 10 : maxValue
     
     for (let i = 0; i < Math.floor(value / 2); i++) {
         elements.push(
@@ -38,7 +37,7 @@ function skillValue(value: number, maxValue: number): JSX.Element[] {
         )
     }
 
-    for (let i = Math.ceil(value / 2); i < maxValue / 2; i++) {
+    for (let i = Math.ceil(value / 2); i < data.maxValue / 2; i++) {
         elements.push(
             <Image
                 src="/icons/circle-svgrepo-com.svg"
@@ -66,7 +65,7 @@ function skillElements(): JSX.Element[] {
                 </div>
 
                 <div className="min-w-[50%] pb-[2px] pl-2 flex">
-                    {skillValue(_skills[i].value, _skills[i].maxValue)}
+                    {skillValue(_skills[i].value)}
                 </div>
             </div>
         )

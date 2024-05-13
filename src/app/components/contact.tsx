@@ -23,7 +23,7 @@ function contactElement(element: string): JSX.Element {
         homepage: "globe-svgrepo-com.svg"
     }
 
-    const isVisible = data.getVisibilty(element)
+    const isVisible = _contact[element as keyof data.Contact].visible
     if (! isVisible) return <></>
 
     return (
@@ -37,7 +37,7 @@ function contactElement(element: string): JSX.Element {
                 />
             </div>
             <div className={sofiaSansSemiCondensed.className}>
-                {_contact[element as keyof object]}
+                {_contact[element as keyof data.Contact].value}
             </div>
         </div>
     )
