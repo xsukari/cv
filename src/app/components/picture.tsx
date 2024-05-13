@@ -5,7 +5,7 @@ function getPicture(): string {
     if (fs.existsSync(process.cwd() + "/public/portrait.jpg")) {
         return "/portrait.jpg"
     } else {
-        return "/placeholder_portrait.jpg"
+        return "/placeholders/placeholder_portrait.jpg"
     }
 }
 
