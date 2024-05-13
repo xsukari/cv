@@ -8,10 +8,11 @@ const experienceLimit = _experience.length > 2 ? 2 : _experience.length
 
 function activityElements(activities: data.Activity[]): JSX.Element[] {
     const elements: JSX.Element[] = []
+    let i = 0
 
     activities.forEach(element => {
         elements.push (
-            <div className="flex">
+            <div className="flex" key={i}>
                 {"•"}
                 <div className="pl-2">
                     <div className={openSans.className}>
@@ -19,8 +20,8 @@ function activityElements(activities: data.Activity[]): JSX.Element[] {
                     </div>
                 </div>
             </div>
-
         )
+        i++
     })
 
     return elements
@@ -31,7 +32,7 @@ function experienceElements(): JSX.Element[] {
 
     for (let i = 0; i < experienceLimit; i++) {
         elements.push (
-            <div className="px-7 pt-5">
+            <div className="px-7 pt-5" key={i}>
                 <div className="py-1">
                     <div className={sofiaSansSemiCondensed.className}>
                         <div className="text-lg">

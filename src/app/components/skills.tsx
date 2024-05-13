@@ -21,6 +21,7 @@ function skillValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
+                key={i}
             />
         )
     }
@@ -33,6 +34,7 @@ function skillValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
+                key={Math.floor(value / 2) + 1}
             />
         )
     }
@@ -45,6 +47,7 @@ function skillValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
+                key={i}
             />
         )
     }
@@ -57,7 +60,7 @@ function skillElements(): JSX.Element[] {
 
     for (let i = 0; i < skillsLimit; i++) {
         elements.push (
-            <div className={"w-1/2 py-1 " + ((i % 2 === 0) ? "pr-2" : "pl-2" ) + " flex"}>
+            <div className={"w-1/2 py-1 " + ((i % 2 === 0) ? "pr-2" : "pl-2" ) + " flex"} key={i}>
                 <div className="min-w-[50%]">
                     <div className={sofiaSansSemiCondensed.className}>
                         {_skills[i].name}

@@ -20,6 +20,7 @@ function languageValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
+                key={i}
             />
         )
     }
@@ -53,10 +54,11 @@ function languageValue(value: number): JSX.Element[] {
 
 function languageElements(): JSX.Element[] {
     const elements: JSX.Element[] = []
+    let i = 0
 
     _languages.forEach(element => {
         elements.push (
-            <div className="py-1 flex">
+            <div className="py-1 flex" key={i}>
                 <div className={sofiaSansSemiCondensed.className}>
                     {element.name}
                 </div>
@@ -66,6 +68,7 @@ function languageElements(): JSX.Element[] {
                 </div>
             </div>
         )
+        i++
     })
 
     return elements
