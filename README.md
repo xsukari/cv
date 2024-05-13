@@ -1,3 +1,7 @@
+## Preview
+
+![Alt text](preview.jpg?raw=true "Title")
+
 ## Limitations
 - This project uses pnpm. You need to have it set up already.
 
