@@ -29,7 +29,7 @@
 
 ## Getting Started
 1. Put an image of yourself as "portrait.jpg", with a 1:1 aspect ratio, I used 1600 px * 1600 px, into /cv/public/.
-2. Still in /cv/public/, copy "placeholder_data.json" and rename it to "data.json".
+2. Copy "placeholder_data.json" from /cv/public/placeholders/ and paste it into /cv/public/, then rename it to "data.json".
 3. Fill out data.json with your values. You can add / remove array elements from education, languages, skills, experiences, or activities (contained in an experience entry). There are hard limits for education (2), skills (10), and experiences (2), that are enforced in the code, but not for languages or activities. If something overflows after filling out data.json, try shortening some entries or remove some less important information.
 4. Install dependencies with "pnpm install".
 5. Run the development server with "pnpm dev".

@@ -68,7 +68,7 @@ function getDataFile(): string {
     if (fs.existsSync(process.cwd() + "/public/data.json")) {
         return process.cwd() + "/public/data.json"
     } else {
-        return process.cwd() + "/public/placeholder_data.json"
+        return process.cwd() + "/public/placeholders/placeholder_data.json"
     }
 }
 
