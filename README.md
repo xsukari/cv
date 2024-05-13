@@ -1,11 +1,13 @@
 ## Preview
 
-![Alt text](preview.jpg?raw=true "Title")
+![Preview](preview.jpg?raw=true "Preview")
 
 ## Limitations
 - This project uses pnpm. You need to have it set up already.
 
 - If you don't know how to properly edit a JSON file or run the project, this project unfortunately isn't for you.
+
+- When changing your data.json, you'll have to restart the project (close terminal or CTRL + C, then run "pnpm dev" again). I tried putting the data into Typescript files, but unfortunately I wasn't able to get dynamic imports to work as you'd hope, you know, because when you first clone the project, you won't have your own data file, only the placeholder. I could just remove the placeholder and have just a single file, which is always imported, where you replace the placeholder information with yours, but I didn't want any personal information to be part of the repo, which is why the data.json you create is ignored by git.
 
 - I unfortunately don't have time to support this project for other users, because it's really just meant for me, but it still might be useful for others, therefore I have it public, aside form portfolio purposes.
 
