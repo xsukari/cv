@@ -36,4 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 /public/portrait.jpg
-/public/data.json
+/public/*data.json
+/public/own
