@@ -7,6 +7,8 @@
 
 - If you don't know how to properly edit a JSON file or run the project, this project unfortunately isn't for you.
 
+- Last tested on Chromium Version 124.0.6367.201 on Fedora 40.
+
 - When changing your data.json, you'll have to restart the project (close terminal or CTRL + C, then run "pnpm dev" again). I tried putting the data into Typescript files, but unfortunately I wasn't able to get dynamic imports to work as you'd hope, you know, because when you first clone the project, you won't have your own data file, only the placeholder. I could just remove the placeholder and have just a single file, which is always imported, where you replace the placeholder information with yours, but I didn't want any personal information to be part of the repo, which is why the data.json you create is ignored by git.
 
 - I unfortunately don't have time to support this project for other users, because it's really just meant for me, but it still might be useful for others, therefore I have it public, aside form portfolio purposes.
@@ -34,8 +36,8 @@
 4. Install dependencies with "pnpm install".
 5. Run the development server with "pnpm dev".
 6. Open [http://localhost:3000](http://localhost:3000) with your browser.
-7. Save page as PDF or use "Print", then select the entry "save as PDF". If you don't know how to do that with your browser, check the web for instructions.
-8. Hopefully everything will have come out as I intended, it does for me at least. If it doesn't, but you are experienced enough, try modifying the project. I unfortunately don't have time to support this project for other users, because it's really just meant for me, but it still might be useful for others, therefore I have it public, aside form portfolio purposes.
+8. Select "Print..." from the three dot (Chrome) / three bar (Firefox) menu, "Save as PDF" should already be selected. Set paper size to "A4", set margins to "none", tick "Print backgrounds" / "Background graphics", untick "headers and footers" if there.
+9. Hopefully everything will have come out as I intended.
 
 ## To-do
 
