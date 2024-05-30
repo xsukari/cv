@@ -17,6 +17,7 @@ export default function picture() {
             width={0}
             height={0}
             sizes="100vw"
+            priority={true}
             style={{ width: "100%", height: "auto" }}
         />
     )
