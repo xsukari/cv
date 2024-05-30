@@ -6,7 +6,7 @@ const _languages = (data.getData(data.categories.languages) as data.Languages[])
     .sort((a, b) => a.name.localeCompare(b.name))
     .sort((a, b) => b.value - a.value)
 
-function languageValue(value: number): JSX.Element[] {
+function languageValue(value: number, name: string): JSX.Element[] {
     const elements: JSX.Element[] = []
 
     // Overwrite parameters in case of invalid input in data.json
@@ -20,7 +20,7 @@ function languageValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
-                key={i}
+                key={name + i}
             />
         )
     }
@@ -58,13 +58,13 @@ function languageElements(): JSX.Element[] {
 
     _languages.forEach(element => {
         elements.push (
-            <div className="py-1 flex" key={i}>
+            <div className="py-1 flex" key={"language" + i}>
                 <div className={sofiaSansSemiCondensed.className}>
                     {element.name}
                 </div>
 
                 <div className="invert pb-[2px] pl-12 flex">
-                    {languageValue(element.value)}
+                    {languageValue(element.value, element.name)}
                 </div>
             </div>
         )

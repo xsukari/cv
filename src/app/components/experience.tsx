@@ -12,7 +12,7 @@ function activityElements(activities: data.Activity[]): JSX.Element[] {
 
     activities.forEach(element => {
         elements.push (
-            <div className="flex" key={i}>
+            <div className="flex" key={"experience" + i}>
                 {"•"}
                 <div className="pl-2">
                     <div className={openSans.className}>

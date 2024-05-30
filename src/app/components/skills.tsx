@@ -7,7 +7,7 @@ const _skills = (data.getData(data.categories.skills) as data.Skills[])
     .sort((a, b) => b.value - a.value)
 const skillsLimit = _skills.length > 10 ? 10 : _skills.length
 
-function skillValue(value: number): JSX.Element[] {
+function skillValue(value: number, name: string): JSX.Element[] {
     const elements: JSX.Element[] = []
 
     // Overwrite parameters in case of invalid input in data.json
@@ -21,7 +21,7 @@ function skillValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
-                key={i}
+                key={"\"" + name  + "\"_" + i}
             />
         )
     }
@@ -30,11 +30,11 @@ function skillValue(value: number): JSX.Element[] {
         elements.push(
             <Image
                 src="/icons/circle-half-1.svg"
-                alt={"progress " + Math.floor(value / 2) + 1}
+                alt={"progress " + Math.floor(value / 2)}
                 width={20}
                 height={20}
                 className="mx-[1px]"
-                key={Math.floor(value / 2) + 1}
+                key={"\"" + name  + "\"_" + Math.floor(value / 2)}
             />
         )
     }
@@ -47,7 +47,7 @@ function skillValue(value: number): JSX.Element[] {
                 width={20}
                 height={20}
                 className="mx-[1px]"
-                key={i}
+                key={"\"" + name  + "\"_" + i}
             />
         )
     }
@@ -60,7 +60,7 @@ function skillElements(): JSX.Element[] {
 
     for (let i = 0; i < skillsLimit; i++) {
         elements.push (
-            <div className={"w-1/2 py-1 " + ((i % 2 === 0) ? "pr-2" : "pl-2" ) + " flex"} key={i}>
+            <div className={"w-1/2 py-1 " + ((i % 2 === 0) ? "pr-2" : "pl-2" ) + " flex"} key={"skill" + i}>
                 <div className="min-w-[50%]">
                     <div className={sofiaSansSemiCondensed.className}>
                         {_skills[i].name}
@@ -68,7 +68,7 @@ function skillElements(): JSX.Element[] {
                 </div>
 
                 <div className="min-w-[50%] pb-[2px] pl-2 flex">
-                    {skillValue(_skills[i].value)}
+                    {skillValue(_skills[i].value, _skills[i].name)}
                 </div>
             </div>
         )

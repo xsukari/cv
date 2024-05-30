@@ -10,7 +10,7 @@ function educationElements(): JSX.Element[] {
 
     for (let i = 0; i < educationLimit; i++) {
         elements.push (
-            <div className="px-7 pt-5" key={i}>
+            <div className="px-7 pt-5" key={"education" + i}>
                 <div className="py-1">
                     <div className={sofiaSansSemiCondensed.className}>
                         {_education[i].degree}
